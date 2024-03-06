@@ -53,7 +53,7 @@ if repositories:
         
         if pull_requests:
             # Save pull requests data to a JSON file
-            file_path = f"HomeAssignment/Files/json_files/{repo_name}_pull_requests.json"
+            file_path = f"Files/json_files/{repo_name}_pull_requests.json"
             save_json(pull_requests, file_path)
             
             print(f"Pull requests for {repo_owner}/{repo_name} saved to {file_path}")
