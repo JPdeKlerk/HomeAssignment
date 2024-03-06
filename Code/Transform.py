@@ -65,4 +65,4 @@ json_files = ["Files/json_files/" + file for file in os.listdir("json_files") if
 final_df = transform_and_aggregate(json_files)
 
 # Write final_df DataFrame to a Parquet file
-final_df.write.mode("overwrite").parquet("Files/parquet_files")
+final_df.write.mode("overwrite").parquet("Files/parquet_files/pr_table.parquet")
