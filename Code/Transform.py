@@ -10,25 +10,9 @@ spark = SparkSession.builder \
 
 # Define the schema for the JSON data
 schema = StructType([
-    StructField("url", StringType(), True),
     StructField("id", IntegerType(), True),
-    StructField("node_id", StringType(), True),
-    StructField("html_url", StringType(), True),
-    StructField("diff_url", StringType(), True),
-    StructField("patch_url", StringType(), True),
-    StructField("issue_url", StringType(), True),
-    StructField("number", IntegerType(), True),
     StructField("state", StringType(), True),
-    StructField("locked", BooleanType(), True),
-    StructField("title", StringType(), True),
-    StructField("user", StructType([
-        StructField("login", StringType(), True)
-    ])),
-    StructField("created_at", DateType(), True),
-    StructField("updated_at", DateType(), True),
-    StructField("closed_at", DateType(), True),
     StructField("merged_at", DateType(), True),
-    StructField("merge_commit_sha", StringType(), True),
     StructField("base", StructType([
         StructField("repo", StructType([
             StructField("id", IntegerType(), True),
